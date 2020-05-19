@@ -22,7 +22,7 @@ public slots:
 private:
     QString name;
     QUdpSocket socket;
-    quint16 port = 2020;
+    quint16 port = 3971;
 };
 
 #endif // CHAT_H
