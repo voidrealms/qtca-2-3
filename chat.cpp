@@ -2,7 +2,7 @@
 
 Chat::Chat(QObject *parent) : QObject(parent)
 {
-    if(!socket.bind(port,QUdpSocket::ShareAddress))
+    if(!socket.bind(port,QUdpSocket::ReuseAddressHint)) //ShareAddress has some issues on windows
     {
         qInfo() << socket.errorString();
     }
